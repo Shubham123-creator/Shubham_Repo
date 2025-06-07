@@ -3,9 +3,12 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/hooks
+   - source: /style.css
+    destination: /var/www/html/hooks
 hooks:
   BeforeInstall:
     - location: scripts/dep.sh
       timeout: 300
       runas: root
+
 
